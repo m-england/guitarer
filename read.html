@@ -4,75 +4,27 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="./guitar-icon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Ref - Guitarer</title>
-    <script type="module" crossorigin src="./assets/main-bKzyxLxg.js"></script>
+    <title>Read - Guitarer</title>
+    <script type="module" crossorigin src="./assets/read-BsFZRRMo.js"></script>
     <link rel="modulepreload" crossorigin href="./assets/chordRenderer-BlKBfZfo.js">
     <link rel="stylesheet" crossorigin href="./assets/chordRenderer-BSshFD7z.css">
   </head>
   <body>
     <main>
-      <div id="app">
-        <div class="form-selector">
-          <label class="form-option">
-            C
-            <input type="radio" name="chord-form" value="C" checked>
-          </label>
-          <label class="form-option">
-            A
-            <input type="radio" name="chord-form" value="A">
-          </label>
-          <label class="form-option">
-            G
-            <input type="radio" name="chord-form" value="G">
-          </label>
-          <label class="form-option">
-            E
-            <input type="radio" name="chord-form" value="E">
-          </label>
-          <label class="form-option">
-            D
-            <input type="radio" name="chord-form" value="D">
-          </label>
-        </div>
+      <div id="read-container">
+        <svg id="reveal-name" class="reveal-icon" xmlns="http://www.w3.org/2000/svg" width="54" height="54" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
+          <circle cx="12" cy="12" r="3"/>
+        </svg>
 
-        <div class="type-selector">
-          <label class="type-option">
-            Maj
-            <input type="radio" name="chord-type" value="major" checked>
-          </label>
-          <label class="type-option">
-            Min
-            <input type="radio" name="chord-type" value="minor">
-          </label>
-          <label class="type-option">
-            7
-            <input type="radio" name="chord-type" value="dom7">
-          </label>
-          <label class="type-option">
-            m7
-            <input type="radio" name="chord-type" value="min7">
-          </label>
-          <label class="type-option">
-            maj7
-            <input type="radio" name="chord-type" value="maj7">
-          </label>
-          <label class="type-option">
-            5
-            <input type="radio" name="chord-type" value="power5">
-          </label>
-        </div>
-      </div>
+        <div id="chord-display" class="chord-display"></div>
 
-      <div id="controls">
-        <div class="transpose-controls">
-          <button id="transpose-down">-1</button>
-          <button id="transpose-up">+1</button>
-        </div>
+        <div id="chord-name" class="chord-name hidden"></div>
       </div>
     </main>
 
     <nav class="bottom-nav">
-      <a href="index.html" class="nav-item active">
+      <a href="index.html" class="nav-item">
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
           <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/>
           <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/>
@@ -93,7 +45,7 @@
         </svg>
         <span>Play</span>
       </a>
-      <a href="read.html" class="nav-item">
+      <a href="read.html" class="nav-item active">
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
           <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
           <circle cx="12" cy="12" r="3"/>

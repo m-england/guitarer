@@ -4,82 +4,46 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="./guitar-icon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Ref - Guitarer</title>
-    <script type="module" crossorigin src="./assets/main-bKzyxLxg.js"></script>
+    <title>Practice - Guitarer</title>
+    <script type="module" crossorigin src="./assets/practice-BRNu25my.js"></script>
     <link rel="modulepreload" crossorigin href="./assets/chordRenderer-BlKBfZfo.js">
     <link rel="stylesheet" crossorigin href="./assets/chordRenderer-BSshFD7z.css">
   </head>
   <body>
     <main>
-      <div id="app">
-        <div class="form-selector">
-          <label class="form-option">
-            C
-            <input type="radio" name="chord-form" value="C" checked>
-          </label>
-          <label class="form-option">
-            A
-            <input type="radio" name="chord-form" value="A">
-          </label>
-          <label class="form-option">
-            G
-            <input type="radio" name="chord-form" value="G">
-          </label>
-          <label class="form-option">
-            E
-            <input type="radio" name="chord-form" value="E">
-          </label>
-          <label class="form-option">
-            D
-            <input type="radio" name="chord-form" value="D">
-          </label>
-        </div>
-
-        <div class="type-selector">
-          <label class="type-option">
-            Maj
-            <input type="radio" name="chord-type" value="major" checked>
-          </label>
-          <label class="type-option">
-            Min
-            <input type="radio" name="chord-type" value="minor">
-          </label>
-          <label class="type-option">
-            7
-            <input type="radio" name="chord-type" value="dom7">
-          </label>
-          <label class="type-option">
-            m7
-            <input type="radio" name="chord-type" value="min7">
-          </label>
-          <label class="type-option">
-            maj7
-            <input type="radio" name="chord-type" value="maj7">
-          </label>
-          <label class="type-option">
-            5
-            <input type="radio" name="chord-type" value="power5">
-          </label>
-        </div>
+      <div id="practice-container">
+        <div id="chord1" class="chord-display"></div>
+        <div id="chord2" class="chord-display"></div>
       </div>
 
       <div id="controls">
-        <div class="transpose-controls">
-          <button id="transpose-down">-1</button>
-          <button id="transpose-up">+1</button>
+        <div class="control-icons">
+          <svg id="new-chords" class="refresh-icon" xmlns="http://www.w3.org/2000/svg" width="54" height="54" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21.5 2v6h-6M2.5 22v-6h6M2 11.5a10 10 0 0 1 18.8-4.3M22 12.5a10 10 0 0 1-18.8 4.2"/>
+          </svg>
+          <svg id="play-timer" class="play-icon" xmlns="http://www.w3.org/2000/svg" width="54" height="54" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"/>
+            <polygon points="10 8 16 12 10 16 10 8" fill="currentColor"/>
+          </svg>
+          <svg id="pause-timer" class="pause-icon hidden" xmlns="http://www.w3.org/2000/svg" width="54" height="54" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"/>
+            <rect x="9" y="8" width="2" height="8" fill="currentColor"/>
+            <rect x="13" y="8" width="2" height="8" fill="currentColor"/>
+          </svg>
         </div>
+        <div id="timer-display" class="timer-display">5:00</div>
       </div>
     </main>
 
     <nav class="bottom-nav">
-      <a href="index.html" class="nav-item active">
+      <a href="index.html" class="nav-item">
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
           <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/>
           <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/>
         </svg>
         <span>Ref</span>
       </a>
-      <a href="practice.html" class="nav-item">
+      <a href="practice.html" class="nav-item active">
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
           <path d="M17 3a2.85 2.83 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5Z"/>
           <path d="m15 5 4 4"/>
